@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.Extensions.Logging.Abstractions;
 using System.Reflection;
 
 namespace ConversionSystem.Shared
@@ -26,22 +27,23 @@ namespace ConversionSystem.Shared
             }
         }
 
-        //public static void RegisterAutoMapper(this IServiceCollection services)
-        //{
-        //    services.AddSingleton<IMapper>(provider =>
-        //    {
-        //        var profiles = provider.GetServices<Profile>();
-        //        var mapperConfig = new MapperConfiguration(mc =>
-        //        {
-        //            foreach (var profile in profiles)
-        //            {
-        //                mc.AddProfile(profile);
-        //            }
-        //        });
-        //        var mapper = mapperConfig.CreateMapper();
-        //        return mapper;
-        //    });
-        //}
+        public static void RegisterAutoMapper(this IServiceCollection services)
+        {
+            services.AddSingleton<IMapper>(provider =>
+            {
+                var profiles = provider.GetServices<Profile>();
+
+                var mapperConfig = new MapperConfiguration(mc =>
+                {
+                    foreach (var profile in profiles)
+                    {
+                        mc.AddProfile(profile);
+                    }
+                }, new NullLoggerFactory());
+                var mapper = mapperConfig.CreateMapper();
+                return mapper;
+            });
+        }
 
         /// <summary>
         /// Регистрирует <see cref="Profile"/> автомапера

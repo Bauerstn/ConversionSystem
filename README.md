@@ -1,1 +1,1 @@
-# ConversionSystem
+# ConversionSystem - тестовое задание для стажера-разработчика

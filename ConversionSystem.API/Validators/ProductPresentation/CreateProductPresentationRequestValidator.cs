@@ -15,10 +15,6 @@ namespace ConversionSystem.API.Validators.ProductPresentation
         public CreateProductPresentationRequestValidator(IProductPresentationReadRepository productPresentationReadRepository,
             IProductReadRepository productReadRepository)
         {
-            RuleFor(productPresentation => productPresentation.Id)
-                .NotNull().WithMessage("Id не должно быть null")
-                .NotEmpty().WithMessage("Id не должно быть пустым");
-
             RuleFor(productPresentation => productPresentation.ProductId)
                 .NotNull().WithMessage("Товар не должно быть null.")
                 .NotEmpty().WithMessage("Товар не должно быть пустым.")

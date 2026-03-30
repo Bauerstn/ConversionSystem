@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace ConversionSystem.API.Infrastructures.Models.Enums
+namespace ConversionSystem.API.Models.Enums
 {
     /// <summary>
     /// Типы оформления

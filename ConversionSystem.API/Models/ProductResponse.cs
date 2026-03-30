@@ -1,4 +1,4 @@
-﻿namespace ConversionSystem.API.Infrastructures.Models
+﻿namespace ConversionSystem.API.Models
 {
     /// <summary>
     /// Модель ответа сущности товара

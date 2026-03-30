@@ -1,6 +1,6 @@
-﻿using ConversionSystem.API.Infrastructures.Models.Enums;
+﻿using ConversionSystem.API.Models.Enums;
 
-namespace ConversionSystem.API.Infrastructures.Models
+namespace ConversionSystem.API.Models
 {
     /// <summary>
     /// Модель ответа сущности товара в оформлении

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
@@ -17,12 +17,6 @@
     <ProjectReference Include="..\ConversionSystem.Repositories.Contracts\ConversionSystem.Repositories.Contracts.csproj" />
     <ProjectReference Include="..\ConversionSystem.Service.Contracts\ConversionSystem.Service.Contracts.csproj" />
     <ProjectReference Include="..\ConversionSystem.Shared\ConversionSystem.Shared.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Infrastructures\ModelsRequest\Product\" />
-    <Folder Include="Infrastructures\ModelsRequest\ProductPresentation\" />
-    <Folder Include="Infrastructures\ModelsRequest\ReportResult\" />
   </ItemGroup>
 
 </Project>

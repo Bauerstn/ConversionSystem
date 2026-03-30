@@ -19,7 +19,7 @@ namespace ConversionSystem.Repositories.Contracts.Interfaces
         Task<ProductPresentation?> GetByIdAsync(Guid id, CancellationToken cancellationToken);
 
         /// <summary>
-        /// Получить список <see cref="Product"/> по идентификаторам
+        /// Получить список <see cref="ProductPresentation"/> по идентификаторам
         /// </summary>
         Task<Dictionary<Guid, ProductPresentation>> GetByIdsAsync(IEnumerable<Guid> ids, CancellationToken cancellationToken);
 
@@ -27,5 +27,10 @@ namespace ConversionSystem.Repositories.Contracts.Interfaces
         /// Получить <see cref="ProductPresentation"/> по идентификатору продукта и типу оформления
         /// </summary>
         Task<ProductPresentation?> GetByProductIdAndPresentationTypeAsync(Guid productId, PresentationTypes presentationType, CancellationToken cancellationToken);
+
+        /// <summary>
+        /// Проверка есть ли <see cref="ProductPresentation"/> по указанному id
+        /// </summary>
+        Task<bool> AnyByIdAsync(Guid id, CancellationToken cancellationToken);
     }
 }

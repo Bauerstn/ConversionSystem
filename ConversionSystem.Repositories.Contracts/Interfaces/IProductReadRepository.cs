@@ -21,5 +21,10 @@ namespace ConversionSystem.Repositories.Contracts.Interfaces
         /// Получить список <see cref="Product"/> по идентификаторам
         /// </summary>
         Task<Dictionary<Guid, Product>> GetByIdsAsync(IEnumerable<Guid> ids, CancellationToken cancellationToken);
+
+        /// <summary>
+        /// Проверка есть ли <see cref="Product"/> по указанному id
+        /// </summary>
+        Task<bool> AnyByIdAsync(Guid id, CancellationToken cancellationToken);
     }
 }

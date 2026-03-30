@@ -40,5 +40,11 @@ namespace ConversionSystem.Repositories.Implementations
                 .NotDeletedAt()
                 .Where(x => x.ProductId == productId && x.PresentationType == presentationType)
                 .FirstOrDefaultAsync(cancellationToken);
+
+        Task<bool> IProductPresentationReadRepository.AnyByIdAsync(Guid id, CancellationToken cancellationToken)
+            => reader.Read<Product>()
+                .NotDeletedAt()
+                .ById(id)
+                .AnyAsync(cancellationToken);
     }
 }

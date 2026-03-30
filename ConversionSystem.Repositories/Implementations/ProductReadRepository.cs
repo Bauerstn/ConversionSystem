@@ -33,5 +33,11 @@ namespace ConversionSystem.Repositories.Implementations
                 .ByIds(ids)
                 .OrderBy(x => x.CreatedAt)
                 .ToDictionaryAsync(key => key.Id, cancellationToken);
+
+        Task<bool> IProductReadRepository.AnyByIdAsync(Guid id, CancellationToken cancellationToken)
+            => reader.Read<Product>()
+                .NotDeletedAt()
+                .ById(id)
+                .AnyAsync(cancellationToken);
     }
 }

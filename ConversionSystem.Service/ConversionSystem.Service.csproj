@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.EnumMapping" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ConversionSystem.Common\ConversionSystem.Common.csproj" />
+    <ProjectReference Include="..\ConversionSystem.Context.Contracts\ConversionSystem.Context.Contracts.csproj" />
+    <ProjectReference Include="..\ConversionSystem.Repositories.Contracts\ConversionSystem.Repositories.Contracts.csproj" />
+    <ProjectReference Include="..\ConversionSystem.Service.Contracts\ConversionSystem.Service.Contracts.csproj" />
+    <ProjectReference Include="..\ConversionSystem.Shared\ConversionSystem.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

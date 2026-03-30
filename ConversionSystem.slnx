@@ -1,0 +1,13 @@
+<Solution>
+  <Project Path="ConversionSystem.API/ConversionSystem.API.csproj" Id="5050a684-6976-4a29-9ed5-7ef0a112b108" />
+  <Project Path="ConversionSystem.Common.Entity/ConversionSystem.Common.Entity.csproj" Id="5909435a-259d-4dc9-84ef-47f16b4f8ede" />
+  <Project Path="ConversionSystem.Common/ConversionSystem.Common.csproj" Id="385e91e3-2ae5-48d9-ae7f-14b65f7dbab9" />
+  <Project Path="ConversionSystem.Context.Configuration/ConversionSystem.Context.Configuration.csproj" Id="64b273df-6074-43e8-a628-b7de4ea12c20" />
+  <Project Path="ConversionSystem.Context.Contracts/ConversionSystem.Context.Contracts.csproj" />
+  <Project Path="ConversionSystem.Context/ConversionSystem.Context.csproj" Id="fd7aa676-1226-48e5-993a-2e84daffba9d" />
+  <Project Path="ConversionSystem.Repositories.Contracts/ConversionSystem.Repositories.Contracts.csproj" Id="e1679221-4be8-4a29-87bf-2c7054869a6c" />
+  <Project Path="ConversionSystem.Repositories/ConversionSystem.Repositories.csproj" Id="3e992a82-1a28-438a-afc7-36cb95e8c65e" />
+  <Project Path="ConversionSystem.Service.Contracts/ConversionSystem.Service.Contracts.csproj" Id="fea07f78-885b-4e6e-976d-79b93ea1ac61" />
+  <Project Path="ConversionSystem.Service/ConversionSystem.Service.csproj" Id="1bb47171-40a4-4cee-92c3-aea8ff548c54" />
+  <Project Path="ConversionSystem.Shared/ConversionSystem.Shared.csproj" Id="2e995a31-c8b9-4108-ae6f-8a77d50b4c4f" />
+</Solution>

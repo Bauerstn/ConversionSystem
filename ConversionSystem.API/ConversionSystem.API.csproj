@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
+	<GenerateDocumentationFile>true</GenerateDocumentationFile>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
@@ -14,8 +15,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ConversionSystem.Context\ConversionSystem.Context.csproj" />
     <ProjectReference Include="..\ConversionSystem.Repositories.Contracts\ConversionSystem.Repositories.Contracts.csproj" />
+    <ProjectReference Include="..\ConversionSystem.Repositories\ConversionSystem.Repositories.csproj" />
     <ProjectReference Include="..\ConversionSystem.Service.Contracts\ConversionSystem.Service.Contracts.csproj" />
+    <ProjectReference Include="..\ConversionSystem.Service\ConversionSystem.Service.csproj" />
     <ProjectReference Include="..\ConversionSystem.Shared\ConversionSystem.Shared.csproj" />
   </ItemGroup>
 

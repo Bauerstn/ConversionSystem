@@ -1,29 +1,31 @@
-using ConversionSystem.API.Services;
+using ConversionSystem.API.Infrastructures;
+using ConversionSystem.Context;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddSingleton<IKafkaProducerService, KafkaProducerService>();
+builder.Services.AddControllers(x =>
+{
+    x.Filters.Add<ConversionExceptionFiltr>();
+}).AddControllersAsServices();
 
-builder.Services.AddControllers();
-
-builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.GetSwaggerDocument();
+builder.Services.AddDependencies();
+
+var conString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContextFactory<ConversionSystemContext>(options => options.UseNpgsql(conString), ServiceLifetime.Scoped);
 
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
-
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    app.GetSwaggerDocumnetUI();
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
 
 app.Run();
+

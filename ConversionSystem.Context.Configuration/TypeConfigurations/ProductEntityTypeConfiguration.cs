@@ -20,7 +20,6 @@ namespace ConversionSystem.Context.Configuration.TypeConfigurations
                 .IsRequired();
 
             builder.HasIndex(x => x.Name)
-                .HasFilter($"{nameof(Product.DeletedAt)} is null")
                 .HasDatabaseName($"IX_{nameof(Product)}_{nameof(Product.Name)}");
 
             builder.HasMany(x => x.ProductPresentation)

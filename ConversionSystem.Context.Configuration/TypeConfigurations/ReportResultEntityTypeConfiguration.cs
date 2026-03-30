@@ -16,7 +16,6 @@ namespace ConversionSystem.Context.Configuration.TypeConfigurations
                 .IsRequired();
 
             builder.HasIndex(x => x.Id)
-                .HasFilter($"{nameof(ReportResult.DeletedAt)} is null")
                 .HasDatabaseName($"IX_{nameof(ReportResult)}_{nameof(ReportResult.Id)}");
         }
     }

@@ -5,7 +5,6 @@ using ConversionSystem.API.Models.Enums;
 using ConversionSystem.API.ModelsRequest.Product;
 using ConversionSystem.API.ModelsRequest.ProductPresentation;
 using ConversionSystem.API.ModelsRequest.ReportResult;
-using ConversionSystem.Context.Contracts.Enums;
 using ConversionSystem.Service.Contracts.Models;
 using ConversionSystem.Service.Contracts.Models.Enums;
 using ConversionSystem.Service.Contracts.RequestModels;

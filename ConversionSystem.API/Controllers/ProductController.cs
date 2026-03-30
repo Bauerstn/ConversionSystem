@@ -5,7 +5,6 @@ using ConversionSystem.API.Models;
 using ConversionSystem.API.ModelsRequest.Product;
 using ConversionSystem.Service.Contracts.Interfaces;
 using ConversionSystem.Service.Contracts.RequestModels;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ConversionSystem.API.Controllers
